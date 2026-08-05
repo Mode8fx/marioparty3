@@ -91,7 +91,7 @@ extern s16 D_800B1B70_B2770[];
 extern GAMEMES gMesData[];
 extern s32 omovl;
 
-s8 func_80036610_37210(void) {
+s8 GWMgNoGet(void) {
     return GwSystem.minigame_index;
 }
 

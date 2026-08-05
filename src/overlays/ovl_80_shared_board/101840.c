@@ -34,7 +34,7 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800EE2D
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800EE614_102234_shared_board);
 
-void func_800EE688_1022A8_shared_board(Object *arg0, f32 arg1, f32 arg2) {
+void MBObjectVelocitySet(Object *arg0, f32 arg1, f32 arg2) {
     arg0->velocity.y = arg1;
     arg0->velocity.z = arg2;
 }

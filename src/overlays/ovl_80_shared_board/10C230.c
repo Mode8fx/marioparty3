@@ -60,7 +60,7 @@ void func_800ECDD4_1009F4_shared_board(s32, u8);
 void func_800ED1E4_100E04_shared_board(Vec *, Vec *, Vec *, s32);
 void func_800ED410_101030_shared_board(s8, s32);
 Process *func_800EDB98_1017B8_shared_board(Object *, f32, f32);
-void func_800EE688_1022A8_shared_board(Object *, f32, f32);
+void MBObjectVelocitySet(Object *, f32, f32);
 void func_800F22C0_105EE0_shared_board(s32);
 void func_800F2388_105FA8_shared_board(s32, s32, s32, s32, s32);
 Process *func_800F292C_10654C_shared_board(void);
@@ -3320,8 +3320,8 @@ void MBMain(void) {
                                 HuPrcVSleep();
                             }
 
-                            func_800EE688_1022A8_shared_board(temp_v0_22, 2.0f, 0.0001f);
-                            func_800EE688_1022A8_shared_board(temp_v0_4->player_obj, 2.0f, 0.0001f);
+                            MBObjectVelocitySet(temp_v0_22, 2.0f, 0.0001f);
+                            MBObjectVelocitySet(temp_v0_4->player_obj, 2.0f, 0.0001f);
                             HuPrcSleep(0x1E);
                         } else {
                             MBDlgWinExec(0xA, 0x2F01);
@@ -3340,7 +3340,7 @@ void MBMain(void) {
                             WipeCreateOut(9, 0x10);
                             HuPrcSleep(0x11);
                             MBModelKill(temp_v0_22);
-                            func_800EE688_1022A8_shared_board(temp_v0_4->player_obj, 0, 0);
+                            MBObjectVelocitySet(temp_v0_4->player_obj, 0, 0);
                             temp_v0_4->player_obj->velocity.x = 0.0f;
                             HuPrcSleep(5);
                             WipeCreateIn(9, 0x10);

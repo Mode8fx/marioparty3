@@ -17,7 +17,7 @@ void func_8004A918_4B518(s32);                              /* extern */
 void func_800DBE6C_EFA8C_shared_board(s32);                 /* extern */
 void func_800DCBCC_F07EC_shared_board(s32);                 /* extern */
 void func_800DE9B8_F25D8_shared_board(s32, s32, s32, s32);  /* extern */
-void func_800EE688_1022A8_shared_board(Object *, f32, f32); /* extern */
+void MBObjectVelocitySet(Object *, f32, f32); /* extern */
 void func_800F2304_105F24_shared_board(s32 playerIndex, s16 arg1, u16 arg2);
 void func_800F2388_105FA8_shared_board(s32, s32, s32, s32, s32); /* extern */
 extern s8 D_80105704_119324_shared_board;
@@ -128,7 +128,7 @@ void func_800DCDD4_F09F4_shared_board(void) {
                 if (((GwPlayer[temp_s3->unk0].stat & 1) || (D_800D5558_D6158[GwPlayer[temp_s3->unk0].pad] & 0x8000)) && !(HmfModelData[D_800CDBC8_CE7C8[temp_s3->unk0].UnkDiceInner.unk16].unk18 & 4) && (GWBoardFlagCheck(0x11) == 0)) {
                     temp_s3->unk4++;
                     func_800F2304_105F24_shared_board(temp_s3->unk0, 2, 0);
-                    func_800EE688_1022A8_shared_board(GwPlayer[temp_s3->unk0].player_obj, 2.0f, -0.3f);
+                    MBObjectVelocitySet(GwPlayer[temp_s3->unk0].player_obj, 2.0f, -0.3f);
                     D_800CDD58_CE958 = 0;
                     D_800CDD64_CE964 = 0;
                 }

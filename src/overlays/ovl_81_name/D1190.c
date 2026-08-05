@@ -61,11 +61,11 @@ void func_800EA68C_D245C_name_81(s32 arg0) {
     D_80105124_ECEF4_name_81 = arg0;
 }
 
-void func_800EA698_D2468_name_81(s8 arg0) {
+void MBDCurrentSpaceIndexSet(s8 arg0) {
     GwSystem.current_space_index = arg0;
 }
 
-s8 func_800EA6A4_D2474_name_81(void) {
+s8 MBDCurrentSpaceIndexGet(void) {
     return GwSystem.current_space_index;
 }
 

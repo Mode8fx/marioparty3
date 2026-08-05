@@ -24,7 +24,7 @@ INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BA4B0", func_800E8F78_BBAF8_mini
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BA4B0", func_800E8FE4_BBB64_minigame);
 
-s16 func_800E8FF8_BBB78_minigame(Process *arg0) {
+s16 MinigameSelectionStateGet(Process *arg0) {
     MinigameSelectionData *selection = arg0->user_data;
 
     return selection->state;

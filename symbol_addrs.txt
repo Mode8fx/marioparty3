@@ -141,6 +141,7 @@ MBDlgWinClose = 0x800EC6C8; //rom:0x1002E8 segment:shared_board
 MBDlgWinKill = 0x800EC6EC; //rom:0x10030C segment:shared_board
 MBDlgWinInsertCreateY = 0x800EC70C; //rom:0x10032C segment:shared_board
 MBRand = 0x800EEF80; //rom:0x102BA0 segment:shared_board
+MBObjectVelocitySet = 0x800EE688; //rom:0x1022A8 segment:shared_board
 MBOvlCall = 0x800F8610; //rom:0x10C230 segment:shared_board
 MBOvlCallInit = 0x800F86B4; //rom:0x10C2D4 segment:shared_board
 MBOvlCallExec = 0x800F8774; //rom:0x10C394 segment:shared_board
@@ -164,6 +165,7 @@ Hu3DModelScaleSet = 0x8001C1A0; //rom:0x1CDA0
 
 // gamemes
 GMesExec = 0x800367B0; //rom:0x373B0
+GWMgNoGet = 0x80036610; //rom:0x37210
 GMesCreate = 0x80036C4C; //rom:0x3784C
 GMesStatGet = 0x80037030; //rom:0x37C30
 GMesClose = 0x80037190; //rom:0x37D90
@@ -1107,6 +1109,9 @@ D_80100DCC_shared_board = 0x80100DCC; //segment:shared_board
 D_80100DE0_shared_board = 0x80100DE0; //segment:shared_board
 D_80100DFC_shared_board = 0x80100DFC; //segment:shared_board
 D_80100DF0_shared_board = 0x80100DF0; //segment:shared_board
+//minigame
+MinigameSelectionStateGet = 0x800E8FF8; //rom:0xBBB78 segment:minigame
+
 D_80100E10_shared_board = 0x80100E10; //segment:shared_board
 
 D_80100E5C_shared_board = 0x80100E5C; //segment:shared_board
@@ -1150,6 +1155,9 @@ MBDBackInvertSet = 0x800E887C; //rom:0xD064C segment:name_81
 MBDBackFlipSet = 0x800E88B0; //rom:0xD0680 segment:name_81
 MBDCameraSpeedSet = 0x800E88E4; //rom:0xD06B4 segment:name_81
 MBDCameraSpeedGet = 0x800E88F0; //rom:0xD06C0 segment:name_81
+MBDCurrentSpaceIndexSet = 0x800EA698; //rom:0xD2468 segment:name_81
+MBDCurrentSpaceIndexGet = 0x800EA6A4; //rom:0xD2474 segment:name_81
+MBDObjectVelocitySet = 0x800EF7C8; //rom:0xD7598 segment:name_81
 MBDCameraBackOffsetSet = 0x800E8A1C; //rom:0xD07EC segment:name_81
 
 D_800D1708_D2308 = 0x800D1708; //type:u16
