@@ -1,4 +1,5 @@
 #include "game/gamemes.h"
+#include "game/gamework_data.h"
 #include "game/audio.h"
 #include "game/sprite.h"
 #include "stdarg.h"
@@ -90,7 +91,9 @@ extern s16 D_800B1B70_B2770[];
 extern GAMEMES gMesData[];
 extern s32 omovl;
 
-INCLUDE_ASM("asm/nonmatchings/gamemes", func_80036610_37210);
+s8 func_80036610_37210(void) {
+    return GwSystem.minigame_index;
+}
 
 void func_8003661C_3721C(void) {
     s16 i;
@@ -403,7 +406,9 @@ void GMesClose(void) {
 
 INCLUDE_ASM("asm/nonmatchings/gamemes", func_800371DC_37DDC);
 
-INCLUDE_ASM("asm/nonmatchings/gamemes", func_8003724C_37E4C);
+void func_8003724C_37E4C(s16 arg0) {
+    D_800B1A54_B2654 = arg0;
+}
 
 void func_80037258_37E58(void) {
     s16 i;

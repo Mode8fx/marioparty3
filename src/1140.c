@@ -1,5 +1,7 @@
 #include "common.h"
 
+extern u8 D_800A9740_AA340[];
+extern u8 *D_800A97B8_AA3B8;
 s32 func_80007080_7C80(s32, s32);
 
 INCLUDE_ASM("asm/nonmatchings/1140", func_80000540_1140);
@@ -12,13 +14,17 @@ INCLUDE_ASM("asm/nonmatchings/1140", func_8000086C_146C);
 
 INCLUDE_ASM("asm/nonmatchings/1140", func_80000DF0_19F0);
 
-INCLUDE_ASM("asm/nonmatchings/1140", func_80000E9C_1A9C);
+u8 *func_80000E9C_1A9C(void) {
+    return D_800A9740_AA340;
+}
 
 INCLUDE_ASM("asm/nonmatchings/1140", func_80000EA8_1AA8);
 
 INCLUDE_ASM("asm/nonmatchings/1140", func_80000EDC_1ADC);
 
-INCLUDE_ASM("asm/nonmatchings/1140", func_80000EFC_1AFC);
+s32 func_80000EFC_1AFC(void) {
+    return 0x660104;
+}
 
 s32 func_80000F08_1B08(s32 arg0) {
     return 0;
@@ -68,9 +74,13 @@ INCLUDE_ASM("asm/nonmatchings/1140", func_800023B4_2FB4);
 
 INCLUDE_ASM("asm/nonmatchings/1140", func_80002528_3128);
 
-INCLUDE_ASM("asm/nonmatchings/1140", func_800025B4_31B4);
+u8 *func_800025B4_31B4(void) {
+    return D_800A97B8_AA3B8;
+}
 
-INCLUDE_ASM("asm/nonmatchings/1140", func_800025C0_31C0);
+void func_800025C0_31C0(void) {
+    D_800A97B8_AA3B8 = NULL;
+}
 
 INCLUDE_ASM("asm/nonmatchings/1140", func_800025CC_31CC);
 
@@ -191,9 +201,13 @@ INCLUDE_ASM("asm/nonmatchings/1140", func_80006E30_7A30);
 
 INCLUDE_ASM("asm/nonmatchings/1140", func_80006FC4_7BC4);
 
-INCLUDE_ASM("asm/nonmatchings/1140", func_8000704C_7C4C);
+UnkAudio *func_8000704C_7C4C(void) {
+    return D_800A97BC_AA3BC;
+}
 
-INCLUDE_ASM("asm/nonmatchings/1140", func_80007058_7C58);
+void func_80007058_7C58(void) {
+    D_800A97BC_AA3BC = NULL;
+}
 
 s32 func_80007064_7C64(s32 arg0) {
     return func_80007080_7C80(arg0, 0);

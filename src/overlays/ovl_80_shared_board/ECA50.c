@@ -1,6 +1,7 @@
 #include "common.h"
 #include "malloc.h"
 #include "ovl_80.h"
+extern f32 D_80100D40_114960_shared_board;
 
 typedef struct UnkBoard3 {
     /* 0x00 */ void *doublyLinkedList;
@@ -130,7 +131,9 @@ void func_800D93C0_ECFE0_shared_board(omObjData *playerObj) {
     MBModelAttrSetDispOn(temp_s0);
 }
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/ECA50", func_800D95C4_ED1E4_shared_board);
+void func_800D95C4_ED1E4_shared_board(f32 arg0) {
+    D_80100D40_114960_shared_board = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/ECA50", func_800D95D0_ED1F0_shared_board);
 

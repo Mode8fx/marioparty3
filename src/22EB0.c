@@ -5,6 +5,7 @@ void func_80018544_19144(s32, s32);
 void func_80019C00_1A800(void *data);
 void func_80022660_23260(HmfData *);
 extern s16 D_800CDD6A_CE96A;
+extern f32 D_800D2120_D2D20;
 extern u16 D_800D5204_D5E04;
 
 INCLUDE_ASM("asm/nonmatchings/22EB0", func_800222B0_22EB0);
@@ -219,4 +220,6 @@ INCLUDE_ASM("asm/nonmatchings/22EB0", func_8002FDCC_309CC);
 
 INCLUDE_ASM("asm/nonmatchings/22EB0", func_8002FE08_30A08);
 
-INCLUDE_ASM("asm/nonmatchings/22EB0", func_80030030_30C30);
+void func_80030030_30C30(f32 arg0) {
+    D_800D2120_D2D20 = arg0;
+}

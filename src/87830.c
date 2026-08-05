@@ -1,3 +1,6 @@
 #include "common.h"
+extern OSThread *D_800A2DBC_A39BC;
 
-INCLUDE_ASM("asm/nonmatchings/87830", func_80086C30_87830);
+OSThread *func_80086C30_87830(void) {
+    return D_800A2DBC_A39BC;
+}

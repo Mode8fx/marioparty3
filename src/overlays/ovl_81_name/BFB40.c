@@ -1,5 +1,7 @@
 #include "common.h"
 #include "ovl_81.h"
+extern f32 D_80100E10_E8BE0_name_81;
+extern f32 D_80100E14_E8BE4_name_81;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/BFB40", func_800D7D70_BFB40_name_81);
 
@@ -21,11 +23,15 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/BFB40", func_800D8010_BFDE0_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/BFB40", func_800D8314_C00E4_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/BFB40", func_800D85A8_C0378_name_81);
+void func_800D85A8_C0378_name_81(f32 arg0) {
+    D_80100E10_E8BE0_name_81 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/BFB40", func_800D85B4_C0384_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/BFB40", func_800D87DC_C05AC_name_81);
+void func_800D87DC_C05AC_name_81(f32 arg0) {
+    D_80100E14_E8BE4_name_81 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/BFB40", func_800D87E8_C05B8_name_81);
 
