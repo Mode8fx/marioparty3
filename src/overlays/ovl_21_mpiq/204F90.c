@@ -1,4 +1,5 @@
 #include "common.h"
+extern s16 D_8010C9C2_20BFB2_mpiq;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_21_mpiq/204F90", func_801059A0_204F90_mpiq);
 
@@ -18,7 +19,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_21_mpiq/204F90", func_80105E14_205404
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_21_mpiq/204F90", func_8010651C_205B0C_mpiq);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_21_mpiq/204F90", func_80106658_205C48_mpiq);
+s16 func_80106658_205C48_mpiq(void) {
+    return D_8010C9C2_20BFB2_mpiq;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_21_mpiq/204F90", func_80106664_205C54_mpiq);
 

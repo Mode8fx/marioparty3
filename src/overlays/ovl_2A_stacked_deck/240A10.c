@@ -1,4 +1,5 @@
 #include "common.h"
+extern u8 D_8010F6F4_24A764_stacked_deck;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2A_stacked_deck/240A10", func_801059A0_240A10_stacked_deck);
 
@@ -14,7 +15,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2A_stacked_deck/240A10", func_80105BB
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2A_stacked_deck/240A10", func_80105CBC_240D2C_stacked_deck);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2A_stacked_deck/240A10", func_80106290_241300_stacked_deck);
+void func_80106290_241300_stacked_deck(u8 arg0) {
+    D_8010F6F4_24A764_stacked_deck = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2A_stacked_deck/240A10", func_8010629C_24130C_stacked_deck);
 

@@ -1,4 +1,5 @@
 #include "common.h"
+extern u8 D_80115D8C_1F3BAC_messy_memory;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1D_messy_memory/1E37C0", func_801059A0_1E37C0_messy_memory);
 
@@ -8,7 +9,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1D_messy_memory/1E37C0", func_80105A3
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1D_messy_memory/1E37C0", func_80105B04_1E3924_messy_memory);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1D_messy_memory/1E37C0", func_80105B7C_1E399C_messy_memory);
+void func_80105B7C_1E399C_messy_memory(u8 arg0) {
+    D_80115D8C_1F3BAC_messy_memory = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_1D_messy_memory/1E37C0", func_80105B88_1E39A8_messy_memory);
 

@@ -1,4 +1,5 @@
 #include "common.h"
+extern u8 D_80110D90_15F6D0_river_raiders;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_09_river_raiders/1542E0", func_801059A0_1542E0_river_raiders);
 
@@ -8,7 +9,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_09_river_raiders/1542E0", func_80105A
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_09_river_raiders/1542E0", func_80105B04_154444_river_raiders);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_09_river_raiders/1542E0", func_80105B7C_1544BC_river_raiders);
+void func_80105B7C_1544BC_river_raiders(u8 arg0) {
+    D_80110D90_15F6D0_river_raiders = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_09_river_raiders/1542E0", func_80105B88_1544C8_river_raiders);
 

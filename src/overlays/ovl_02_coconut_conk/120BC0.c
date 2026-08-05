@@ -1,4 +1,5 @@
 #include "common.h"
+extern u8 D_8010B1C8_1263E8_coconut_conk;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_02_coconut_conk/120BC0", func_801059A0_120BC0_coconut_conk);
 
@@ -8,7 +9,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_02_coconut_conk/120BC0", func_80105A3
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_02_coconut_conk/120BC0", func_80105B04_120D24_coconut_conk);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_02_coconut_conk/120BC0", func_80105B7C_120D9C_coconut_conk);
+void func_80105B7C_120D9C_coconut_conk(u8 arg0) {
+    D_8010B1C8_1263E8_coconut_conk = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_02_coconut_conk/120BC0", func_80105B88_120DA8_coconut_conk);
 

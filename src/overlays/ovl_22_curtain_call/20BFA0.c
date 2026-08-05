@@ -24,7 +24,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_22_curtain_call/20BFA0", func_8010640
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_22_curtain_call/20BFA0", func_8010644C_20CA4C_curtain_call);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_22_curtain_call/20BFA0", func_80106494_20CA94_curtain_call);
+void func_80106494_20CA94_curtain_call(void) {
+    D_800D6A58_D7658 = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_22_curtain_call/20BFA0", func_801064A0_20CAA0_curtain_call);
 

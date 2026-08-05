@@ -1,4 +1,6 @@
 #include "common.h"
+extern s32 D_8010FAF0_48BAC0_chancetime;
+extern s32 D_8010FE74_48BE44_chancetime;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/chancetime/4822F0", func_80106320_4822F0_chancetime);
 
@@ -16,11 +18,15 @@ INCLUDE_ASM("asm/nonmatchings/overlays/chancetime/4822F0", func_80106A2C_4829FC_
 
 INCLUDE_ASM("asm/nonmatchings/overlays/chancetime/4822F0", func_80106B18_482AE8_chancetime);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/chancetime/4822F0", func_80106BB8_482B88_chancetime);
+s32 func_80106BB8_482B88_chancetime(void) {
+    return D_8010FE74_48BE44_chancetime;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/chancetime/4822F0", func_80106BC4_482B94_chancetime);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/chancetime/4822F0", func_80106BE0_482BB0_chancetime);
+s32 func_80106BE0_482BB0_chancetime(void) {
+    return D_8010FAF0_48BAC0_chancetime;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/chancetime/4822F0", func_80106BEC_482BBC_chancetime);
 

@@ -1,4 +1,5 @@
 #include "common.h"
+extern u8 D_8010EC30_2539F0_three_door_monty;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_three_door_monty/24A760", func_801059A0_24A760_three_door_monty);
 
@@ -14,7 +15,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_three_door_monty/24A760", func_801
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_three_door_monty/24A760", func_80105CBC_24AA7C_three_door_monty);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_three_door_monty/24A760", func_801062E8_24B0A8_three_door_monty);
+void func_801062E8_24B0A8_three_door_monty(u8 arg0) {
+    D_8010EC30_2539F0_three_door_monty = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2B_three_door_monty/24A760", func_801062F4_24B0B4_three_door_monty);
 

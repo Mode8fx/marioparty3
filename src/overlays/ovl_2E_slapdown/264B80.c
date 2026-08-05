@@ -1,4 +1,5 @@
 #include "common.h"
+extern u8 D_8010AA6E_269C4E_slapdown;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_slapdown/264B80", func_801059A0_264B80_slapdown);
 
@@ -14,7 +15,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_slapdown/264B80", func_80105BB4_26
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_slapdown/264B80", func_80105CBC_264E9C_slapdown);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_slapdown/264B80", func_80106290_265470_slapdown);
+void func_80106290_265470_slapdown(u8 arg0) {
+    D_8010AA6E_269C4E_slapdown = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_2E_slapdown/264B80", func_8010629C_26547C_slapdown);
 

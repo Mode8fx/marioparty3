@@ -72,7 +72,10 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EF3F8_D71C8_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EF754_D7524_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EF7C8_D7598_name_81);
+void func_800EF7C8_D7598_name_81(Object *arg0, f32 arg1, f32 arg2) {
+    arg0->velocity.y = arg1;
+    arg0->velocity.z = arg2;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EF7D4_D75A4_name_81);
 

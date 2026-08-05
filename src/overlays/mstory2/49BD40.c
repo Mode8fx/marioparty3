@@ -1,4 +1,5 @@
 #include "common.h"
+extern s32 D_8011B94C_4B1CEC_mstory2;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_801059A0_49BD40_mstory2);
 
@@ -58,7 +59,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_80106470_49C810_mst
 
 INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_801064AC_49C84C_mstory2);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_80106D44_49D0E4_mstory2);
+s32 func_80106D44_49D0E4_mstory2(void) {
+    return D_8011B94C_4B1CEC_mstory2;
+}
 
 void func_80106D50_49D0F0_mstory2(void) {
 }
