@@ -351,7 +351,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/modesel/4F7E90", func_8010ED3C_50122C_mod
 void func_8010F1F4_5016E4_modesel(void) {
 }
 
-INCLUDE_ASM("asm/nonmatchings/overlays/modesel/4F7E90", func_8010F1FC_5016EC_modesel);
+s32 func_8010F1FC_5016EC_modesel(void) {
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/modesel/4F7E90", func_8010F204_5016F4_modesel);
 

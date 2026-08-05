@@ -10,7 +10,15 @@ INCLUDE_ASM("asm/nonmatchings/overlays/inst/4E2C50", func_8010A000_4E31C0_inst);
 
 INCLUDE_ASM("asm/nonmatchings/overlays/inst/4E2C50", func_8010A0E8_4E32A8_inst);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/inst/4E2C50", func_8010A1BC_4E337C_inst);
+void func_8010A1BC_4E337C_inst(void) {
+}
+
+// Required target padding before func_8010A1D0_4E3390_inst.
+__asm__(
+    ".section .text\n"
+    "    nop\n"
+    "    nop\n"
+    "    nop\n");
 
 INCLUDE_ASM("asm/nonmatchings/overlays/inst/4E2C50", func_8010A1D0_4E3390_inst);
 

@@ -4,6 +4,7 @@
 extern f32 D_80104848_EC618_name_81[2];
 extern f32 D_80101000_E8DD0_name_81;
 extern f32 D_801031D0_EAFA0_name_81;
+extern u8 D_80100FFC_E8DCC_name_81;
 extern f32 D_80104848_EC618_name_81[2];
 extern f32 D_80104840_EC610_name_81[];
 s32 MBDBackPosClamp(f32 *, f32);
@@ -146,7 +147,9 @@ void MBDCamera3Dto2D(Vec *arg0, f32 *arg1) {
     arg1[1] = sp10.vec.y + sp10.unk_0C;
 }
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDBackTPLvlSet);
+void MBDBackTPLvlSet(u8 arg0) {
+    D_80100FFC_E8DCC_name_81 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDBackInvertSet);
 

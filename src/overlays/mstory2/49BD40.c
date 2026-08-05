@@ -340,7 +340,13 @@ INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_80110FC4_4A7364_mst
 
 INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_80111024_4A73C4_mstory2);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_80111194_4A7534_mstory2);
+void func_80111194_4A7534_mstory2(void) {
+}
+
+// Required target padding before func_801111A0_4A7540_mstory2.
+__asm__(
+    ".section .text\n"
+    "    nop\n");
 
 INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_801111A0_4A7540_mstory2);
 
@@ -467,7 +473,15 @@ INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_80115C7C_4AC01C_mst
 
 INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_80115CDC_4AC07C_mstory2);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_80115E4C_4AC1EC_mstory2);
+void func_80115E4C_4AC1EC_mstory2(void) {
+}
+
+// Required target padding before func_80115E60_4AC200_mstory2.
+__asm__(
+    ".section .text\n"
+    "    nop\n"
+    "    nop\n"
+    "    nop\n");
 
 INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_80115E60_4AC200_mstory2);
 
@@ -594,7 +608,14 @@ INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_8011A900_4B0CA0_mst
 
 INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_8011A960_4B0D00_mstory2);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_8011AAD0_4B0E70_mstory2);
+void func_8011AAD0_4B0E70_mstory2(void) {
+}
+
+// Required target padding before func_8011AAE0_4B0E80_mstory2.
+__asm__(
+    ".section .text\n"
+    "    nop\n"
+    "    nop\n");
 
 INCLUDE_ASM("asm/nonmatchings/overlays/mstory2/49BD40", func_8011AAE0_4B0E80_mstory2);
 

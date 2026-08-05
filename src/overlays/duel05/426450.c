@@ -266,4 +266,11 @@ INCLUDE_ASM("asm/nonmatchings/overlays/duel05/426450", func_80115468_435EE8_duel
 
 INCLUDE_ASM("asm/nonmatchings/overlays/duel05/426450", func_80115550_435FD0_duel05);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/duel05/426450", func_8011566C_4360EC_duel05);
+void func_8011566C_4360EC_duel05(void) {
+}
+
+// Required target padding at the end of the duel05 text segment.
+__asm__(
+    ".section .text\n"
+    "    nop\n"
+    "    nop\n");

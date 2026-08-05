@@ -438,7 +438,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/msetup/506F20", func_801167B8_512A18_mset
 
 INCLUDE_ASM("asm/nonmatchings/overlays/msetup/506F20", func_80116FE0_513240_msetup);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/msetup/506F20", func_80117818_513A78_msetup);
+s32 func_80117818_513A78_msetup(void) {
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/msetup/506F20", func_80117820_513A80_msetup);
 
