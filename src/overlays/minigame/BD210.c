@@ -1,4 +1,9 @@
 #include "common.h"
+typedef struct {
+    /* 0x00 */ char unk00[0x1C];
+    /* 0x1C */ s32 unk1C;
+    /* 0x20 */ s32 unk20;
+} MinigameObjectData;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BD210", func_800EA690_BD210_minigame);
 
@@ -10,13 +15,25 @@ INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BD210", func_800EA7E0_BD360_mini
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BD210", func_800EA7F0_BD370_minigame);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BD210", func_800EA8F0_BD470_minigame);
+void func_800EA8F0_BD470_minigame(omObjData *arg0, s32 arg1) {
+    MinigameObjectData *data = arg0->data;
+
+    data->unk1C = arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BD210", func_800EA8FC_BD47C_minigame);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BD210", func_800EA910_BD490_minigame);
+void func_800EA910_BD490_minigame(omObjData *arg0, s32 arg1) {
+    MinigameObjectData *data = arg0->data;
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BD210", func_800EA91C_BD49C_minigame);
+    data->unk20 = arg1;
+}
+
+s32 func_800EA91C_BD49C_minigame(omObjData *arg0) {
+    MinigameObjectData *data = arg0->data;
+
+    return data->unk20;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/BD210", func_800EA928_BD4A8_minigame);
 

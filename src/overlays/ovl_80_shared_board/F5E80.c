@@ -9,6 +9,10 @@ void MBItemWarpBlockSwapInit(void);
 extern f32 D_80101250_114E70_shared_board;
 void func_800E9AF0_FD710_shared_board(Vec *, s32);
 extern f32 D_80103418_117038_shared_board;
+extern u8 D_8010124C_114E6C_shared_board;
+extern s32 D_801012BC_114EDC_shared_board;
+extern f32 D_80102DBC_1169DC_shared_board;
+extern s32 D_80105288_118EA8_shared_board;
 void func_800ECB14_100734_shared_board(s16, s16);
 void func_800ECD00_100920_shared_board(s16, s16);
 void func_800F915C_10CD7C_shared_board(s32);
@@ -1064,9 +1068,13 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9344
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9358_FCF78_shared_board);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9730_FD350_shared_board);
+void func_800E9730_FD350_shared_board(f32 arg0) {
+    D_80103418_117038_shared_board = arg0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E973C_FD35C_shared_board);
+f32 func_800E973C_FD35C_shared_board(void) {
+    return D_80103418_117038_shared_board;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9748_FD368_shared_board);
 
@@ -1081,15 +1089,21 @@ void func_800E98E8_FD508_shared_board(f32 *arg0) {
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9940_FD560_shared_board);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9A54_FD674_shared_board);
+void func_800E9A54_FD674_shared_board(u8 arg0) {
+    D_8010124C_114E6C_shared_board = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9A60_FD680_shared_board);
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9A94_FD6B4_shared_board);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9AC8_FD6E8_shared_board);
+void func_800E9AC8_FD6E8_shared_board(f32 arg0) {
+    D_80102DBC_1169DC_shared_board = arg0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9AD4_FD6F4_shared_board);
+f32 func_800E9AD4_FD6F4_shared_board(void) {
+    return D_80102DBC_1169DC_shared_board;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800E9AE0_FD700_shared_board);
 
@@ -1135,7 +1149,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EA320
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EA348_FDF68_shared_board);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EA358_FDF78_shared_board);
+void func_800EA358_FDF78_shared_board(void) {
+    D_801012BC_114EDC_shared_board = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EA364_FDF84_shared_board);
 
@@ -1393,7 +1409,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EBA60
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EBAC8_FF6E8_shared_board);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EBCB0_FF8D0_shared_board);
+void func_800EBCB0_FF8D0_shared_board(s32 arg0) {
+    D_80105288_118EA8_shared_board = arg0;
+}
 
 void func_800EBCBC_FF8DC_shared_board(s16 arg0) {
     GwSystem.current_space_index = arg0;
@@ -1440,4 +1458,6 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EBEAC
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EBEC8_FFAE8_shared_board);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/F5E80", func_800EBED8_FFAF8_shared_board);
+void func_800EBED8_FFAF8_shared_board(void) {
+    D_80105262_118E82_shared_board = 0;
+}

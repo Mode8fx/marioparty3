@@ -1,5 +1,6 @@
 #include "common.h"
 #include "ovl_81.h"
+extern s32 D_8010105C_E8E2C_name_81;
 
 extern s32 D_80100FF8_E8DC8_name_81;
 extern f32 D_80104848_EC618_name_81[2];
@@ -212,7 +213,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E9158_D0F28_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E9180_D0F50_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E9190_D0F60_name_81);
+void func_800E9190_D0F60_name_81(void) {
+    D_8010105C_E8E2C_name_81 = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E919C_D0F6C_name_81);
 

@@ -1,5 +1,10 @@
 #include "common.h"
 #include "ovl_81.h"
+extern s32 D_800A12C0_A1EC0;
+extern s32 D_800A12C4_A1EC4;
+extern s32 D_801011F0_E8FC0_name_81;
+extern s16 D_801053F4_ED1C4_name_81;
+extern s32 D_80101220_E8FF0_name_81;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EDD50_D5B20_name_81);
 
@@ -29,13 +34,19 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EE74C_D651C_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EEC40_D6A10_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EED24_D6AF4_name_81);
+s32 func_800EED24_D6AF4_name_81(void) {
+    return D_801011F0_E8FC0_name_81;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EED30_D6B00_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EED50_D6B20_name_81);
+s32 func_800EED50_D6B20_name_81(void) {
+    return D_800A12C4_A1EC4;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EED5C_D6B2C_name_81);
+void func_800EED5C_D6B2C_name_81(s32 arg0) {
+    D_800A12C0_A1EC0 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EED68_D6B38_name_81);
 
@@ -53,7 +64,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EF3B4_D7184_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EF3D0_D71A0_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EF3EC_D71BC_name_81);
+void func_800EF3EC_D71BC_name_81(s32 arg0) {
+    D_80101220_E8FF0_name_81 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800EF3F8_D71C8_name_81);
 
@@ -178,7 +191,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800F2238_DA008_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800F22E8_DA0B8_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800F23FC_DA1CC_name_81);
+void func_800F23FC_DA1CC_name_81(s16 arg0) {
+    D_801053F4_ED1C4_name_81 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D5B20", func_800F2408_DA1D8_name_81);
 

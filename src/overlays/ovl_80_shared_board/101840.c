@@ -1,11 +1,18 @@
 #include "common.h"
 #include "ovl_80.h"
+extern s32 D_800A12C0_A1EC0;
+extern s32 D_800A12C4_A1EC4;
+extern s16 D_80105564_119184_shared_board;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800EDC20_101840_shared_board);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800EDC40_101860_shared_board);
+s32 func_800EDC40_101860_shared_board(void) {
+    return D_800A12C4_A1EC4;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800EDC4C_10186C_shared_board);
+void func_800EDC4C_10186C_shared_board(s32 arg0) {
+    D_800A12C0_A1EC0 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800EDC58_101878_shared_board);
 
@@ -308,20 +315,20 @@ s32 func_800EF200_102E20_shared_board(s32 arg0) {
     return arg0;
 }
 
-const u8 D_80102320_115F40_shared_board[] = {1, 2, 4, 8, 0, 0, 0, 0}; //0s are padding maybe?
+const u8 D_80102320_115F40_shared_board[] = { 1, 2, 4, 8, 0, 0, 0, 0 }; // 0s are padding maybe?
 
 extern s32 D_801014F0_115110_shared_board;
 extern u8 D_801014F4_115114_shared_board[][3];
 extern s32 D_801014D0_1150F0_shared_board[];
 extern s32 D_80101504_115124_shared_board[];
-void func_800EF208_102E28_shared_board(UnkBoard8* arg0, s16 arg1, s16 arg2, s16 arg3, u16 arg4) {
+void func_800EF208_102E28_shared_board(UnkBoard8 *arg0, s16 arg1, s16 arg2, s16 arg3, u16 arg4) {
     u8 temp_s0;
-    void* temp_s5;
+    void *temp_s5;
     s32 i;
 
     temp_s5 = DataRead(0x13008A);
     sprintf(D_800D5218_D5E18, "%2d", arg2);
-    
+
     for (i = 0; i < 2; i++) {
         temp_s0 = D_800D5218_D5E18[i];
         arg0->unk_0C[arg1] = func_80055810_56410(temp_s5);
@@ -330,22 +337,22 @@ void func_800EF208_102E28_shared_board(UnkBoard8* arg0, s16 arg1, s16 arg2, s16 
         } else {
             func_80055024_55C24(arg0->unk_0A, arg1, arg0->unk_0C[arg1], 0xA);
         }
-        
+
         HuSprPriSet(arg0->unk_0A, arg1, 7);
         HuSprAttrSet(arg0->unk_0A, arg1, 0x01001000);
         func_80054904_55504(arg0->unk_0A, arg1, arg3, arg4);
         func_80055420_56020(arg0->unk_0A, arg1, D_801014F4_115114_shared_board[D_801014F0_115110_shared_board][0], D_801014F4_115114_shared_board[D_801014F0_115110_shared_board][1], D_801014F4_115114_shared_board[D_801014F0_115110_shared_board][2]);
         arg1 += 1;
-        arg3 += 0xE;        
+        arg3 += 0xE;
     }
     DataClose(temp_s5);
 }
 
-UnkBoard8* func_800EF3BC_102FDC_shared_board(void) {
-    UnkBoard8* temp_s2;
-    void* temp_v0_2;
-    void* temp_v0_4;
-    void* var_s0;
+UnkBoard8 *func_800EF3BC_102FDC_shared_board(void) {
+    UnkBoard8 *temp_s2;
+    void *temp_v0_2;
+    void *temp_v0_4;
+    void *var_s0;
 
     temp_s2 = func_800F2C48_106868_shared_board(0x10, 0);
     D_801014F0_115110_shared_board = GwSystem.current_game_length;
@@ -382,15 +389,15 @@ UnkBoard8* func_800EF3BC_102FDC_shared_board(void) {
     return temp_s2;
 }
 
-void func_800EF67C_10329C_shared_board(UnkBoard8* arg0) {
+void func_800EF67C_10329C_shared_board(UnkBoard8 *arg0) {
     func_800F2CA4_1068C4_shared_board(arg0);
 }
 
 s16 func_800EF698_1032B8_shared_board(s32 arg0) {
-    Unk3* temp_s2;
-    Unk3* temp_s3;
+    Unk3 *temp_s2;
+    Unk3 *temp_s3;
     s16 var_s0;
-    UnkBoard8* temp_s1;
+    UnkBoard8 *temp_s1;
 
     temp_s3 = func_800E210C_F5D2C_shared_board(0xA, 0xAE, 0U);
     temp_s2 = func_800E210C_F5D2C_shared_board(5, 0xBC, 0U);
@@ -405,7 +412,7 @@ s16 func_800EF698_1032B8_shared_board(s32 arg0) {
         } else if (D_800D5558_D6158[arg0] & 0x1000) {
             var_s0 = 0;
             break;
-        }       
+        }
     }
 
     func_800EF67C_10329C_shared_board(temp_s1);
@@ -414,13 +421,13 @@ s16 func_800EF698_1032B8_shared_board(s32 arg0) {
     return var_s0;
 }
 
-void func_800EF768_103388_shared_board(UnkBoard8* arg0, s16 arg1) {
+void func_800EF768_103388_shared_board(UnkBoard8 *arg0, s16 arg1) {
     s32 i;
-    Object* temp_v0;
+    Object *temp_v0;
     s16 temp_s2;
     s16 temp = arg0->unk_0A;
-    
-    temp_v0 = arg0->unk_00; //TODO: this is wrong
+
+    temp_v0 = arg0->unk_00; // TODO: this is wrong
     temp_v0->velocity.y = 4.0f;
     temp_v0->velocity.z = -0.5f;
     temp_s2 = (arg1 - temp) / 14;
@@ -428,7 +435,7 @@ void func_800EF768_103388_shared_board(UnkBoard8* arg0, s16 arg1) {
     for (i = 0; i < 14; i++) {
         temp = arg0->unk_0A;
         func_800E6120_F9D40_shared_board(arg0, (temp + temp_s2), 8);
-        HuPrcVSleep();        
+        HuPrcVSleep();
     }
 
     func_800E6120_F9D40_shared_board(arg0, arg1, 8);
@@ -463,7 +470,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800F0C6
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800F0D14_104934_shared_board);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800F0E28_104A48_shared_board);
+void func_800F0E28_104A48_shared_board(s16 arg0) {
+    D_80105564_119184_shared_board = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_80_shared_board/101840", func_800F0E34_104A54_shared_board);
 

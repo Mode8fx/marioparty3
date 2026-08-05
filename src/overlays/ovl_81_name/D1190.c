@@ -1,5 +1,7 @@
 #include "common.h"
 #include "ovl_81.h"
+extern s32 D_80105124_ECEF4_name_81;
+extern s32 D_80105148_ECF18_name_81;
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800E93C0_D1190_name_81);
 
@@ -7,7 +9,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800E9468_D1238_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800E94D0_D12A0_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800E9524_D12F4_name_81);
+void func_800E9524_D12F4_name_81(void) {
+    D_80105148_ECF18_name_81 = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800E9530_D1300_name_81);
 
@@ -53,11 +57,17 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800EA46C_D223C_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800EA4D4_D22A4_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800EA68C_D245C_name_81);
+void func_800EA68C_D245C_name_81(s32 arg0) {
+    D_80105124_ECEF4_name_81 = arg0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800EA698_D2468_name_81);
+void func_800EA698_D2468_name_81(s8 arg0) {
+    GwSystem.current_space_index = arg0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800EA6A4_D2474_name_81);
+s8 func_800EA6A4_D2474_name_81(void) {
+    return GwSystem.current_space_index;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/D1190", func_800EA6B0_D2480_name_81);
 
