@@ -1,8 +1,10 @@
 #include "common.h"
 #include "ovl_81.h"
 
+extern s32 D_80100FF8_E8DC8_name_81;
 extern f32 D_80104848_EC618_name_81[2];
 extern f32 D_80101000_E8DD0_name_81;
+extern f32 D_801031CC_EAF9C_name_81;
 extern f32 D_80102D2C_EAAFC_name_81;
 extern f32 D_801031D0_EAFA0_name_81;
 extern u8 D_80100FFC_E8DCC_name_81;
@@ -12,7 +14,9 @@ s32 MBDBackPosClamp(f32 *, f32);
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E4F50_CCD20_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E4FF4_CCDC4_name_81);
+void func_800E4FF4_CCDC4_name_81(void) {
+    D_80100FF8_E8DC8_name_81 = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDBackClose);
 
@@ -108,9 +112,13 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E8180_CFF50_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E8194_CFF64_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E856C_D033C_name_81);
+void func_800E856C_D033C_name_81(f32 arg0) {
+    D_801031CC_EAF9C_name_81 = arg0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E8578_D0348_name_81);
+f32 func_800E8578_D0348_name_81(void) {
+    return D_801031CC_EAF9C_name_81;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDCameraPos3DSet);
 

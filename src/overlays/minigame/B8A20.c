@@ -1,10 +1,14 @@
 #include "common.h"
 
+extern s16 D_800EB91A_BE49A_minigame;
+extern s32 D_800EB924_BE4A4_minigame;
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B8A20", func_800E5EA0_B8A20_minigame);
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B8A20", func_800E6248_B8DC8_minigame);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B8A20", func_800E625C_B8DDC_minigame);
+void func_800E625C_B8DDC_minigame(s32 arg0) {
+    D_800EB924_BE4A4_minigame = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B8A20", func_800E6268_B8DE8_minigame);
 
@@ -34,7 +38,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B8A20", func_800E6F0C_B9A8C_mini
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B8A20", func_800E6F1C_B9A9C_minigame);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B8A20", func_800E6F34_B9AB4_minigame);
+void func_800E6F34_B9AB4_minigame(s32 arg0) {
+    D_800EB91A_BE49A_minigame = arg0;
+}
 
 INCLUDE_RODATA("asm/nonmatchings/overlays/minigame/B8A20", D_800EBCF4_BE874_minigame);
 

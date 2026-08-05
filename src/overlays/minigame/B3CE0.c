@@ -16,6 +16,8 @@ void func_800E3584_B6104_minigame(s16);
 
 extern s8 D_800EB735_BE2B5_minigame;
 extern u8 D_800EB739_BE2B9_minigame;
+extern s32 D_800EB730_BE2B0_minigame;
+extern u8 D_800EB734_BE2B4_minigame;
 extern u8 D_800EB73A_BE2BA_minigame;
 extern f32 D_800EB73C_BE2BC_minigame;
 extern f32 D_800EB740_BE2C0_minigame;
@@ -41,7 +43,11 @@ INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E123C_B3DBC_mini
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E12B0_B3E30_minigame);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E12E0_B3E60_minigame);
+void func_800E12E0_B3E60_minigame(omObjData *arg0, s32 arg1) {
+    func_800E1BA8_B4728_ObjData *temp_data = arg0->data;
+
+    temp_data->unk40 = arg1;
+}
 
 void func_800E12EC_B3E6C_minigame(omObjData *arg0, f32 arg1) {
     func_800E1BA8_B4728_ObjData *temp_data = arg0->data;
@@ -55,11 +61,23 @@ void func_800E12F8_B3E78_minigame(omObjData *arg0, f32 arg1) {
     temp_data->unk44 = arg1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E1304_B3E84_minigame);
+void func_800E1304_B3E84_minigame(omObjData *arg0, s32 arg1) {
+    func_800E1BA8_B4728_ObjData *temp_data = arg0->data;
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E1310_B3E90_minigame);
+    temp_data->unk08 = arg1;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E131C_B3E9C_minigame);
+void func_800E1310_B3E90_minigame(omObjData *arg0, s32 arg1) {
+    func_800E1BA8_B4728_ObjData *temp_data = arg0->data;
+
+    temp_data->unk0C = arg1;
+}
+
+void func_800E131C_B3E9C_minigame(omObjData *arg0, s32 arg1) {
+    func_800E1BA8_B4728_ObjData *temp_data = arg0->data;
+
+    temp_data->unk10 = arg1;
+}
 
 void func_800E1328_B3EA8_minigame(omObjData *arg0, f32 arg1) {
     func_800E1BA8_B4728_ObjData *temp_data = arg0->data;
@@ -115,7 +133,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E1468_B3FE8_mini
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E147C_B3FFC_minigame);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E1490_B4010_minigame);
+void func_800E1490_B4010_minigame(s32 arg0) {
+    D_800EB734_BE2B4_minigame = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E149C_B401C_minigame);
 
@@ -135,7 +155,9 @@ INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E17E4_B4364_mini
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E17F4_B4374_minigame);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E1804_B4384_minigame);
+void func_800E1804_B4384_minigame(void) {
+    D_800EB730_BE2B0_minigame = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E1810_B4390_minigame);
 
@@ -169,7 +191,9 @@ void func_800E18D8_B4458_minigame(void) {
     D_800EB73A_BE2BA_minigame = 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/overlays/minigame/B3CE0", func_800E19E4_B4564_minigame);
+void func_800E19E4_B4564_minigame(s32 arg0) {
+    D_800EB73A_BE2BA_minigame = arg0;
+}
 
 void func_800E19F0_B4570_minigame(s8 arg0) {
     D_800EB739_BE2B9_minigame = arg0;
