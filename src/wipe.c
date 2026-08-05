@@ -1,5 +1,6 @@
 #include "game/wipe.h"
 #include "include_asm.h"
+extern u8 D_800CCF84_CDB84;
 
 INCLUDE_ASM("asm/nonmatchings/wipe", WipeInit);
 
@@ -9,7 +10,9 @@ INCLUDE_ASM("asm/nonmatchings/wipe", WipeCreateIn);
 
 INCLUDE_ASM("asm/nonmatchings/wipe", WipeCreateOut);
 
-INCLUDE_ASM("asm/nonmatchings/wipe", WipeStatGet);
+s32 WipeStatGet(void) {
+    return D_800CCF84_CDB84;
+}
 
 INCLUDE_ASM("asm/nonmatchings/wipe", WipeColorSet);
 

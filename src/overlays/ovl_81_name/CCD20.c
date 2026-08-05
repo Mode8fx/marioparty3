@@ -3,6 +3,7 @@
 
 extern f32 D_80104848_EC618_name_81[2];
 extern f32 D_80101000_E8DD0_name_81;
+extern f32 D_80102D2C_EAAFC_name_81;
 extern f32 D_801031D0_EAFA0_name_81;
 extern u8 D_80100FFC_E8DCC_name_81;
 extern f32 D_80104848_EC618_name_81[2];
@@ -81,9 +82,13 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E5FB0_CDD80_n
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E77D8_CF5A8_name_81);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDCameraZoomGet);
+f32 MBDCameraZoomGet(void) {
+    return D_80101000_E8DD0_name_81;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDCameraZoomSet);
+void MBDCameraZoomSet(f32 arg0) {
+    D_80101000_E8DD0_name_81 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E7C1C_CF9EC_name_81);
 
@@ -155,9 +160,13 @@ INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDBackInvertSet);
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDBackFlipSet);
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDCameraSpeedSet);
+void MBDCameraSpeedSet(f32 arg0) {
+    D_80102D2C_EAAFC_name_81 = arg0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", MBDCameraSpeedGet);
+f32 MBDCameraSpeedGet(void) {
+    return D_80102D2C_EAAFC_name_81;
+}
 
 INCLUDE_ASM("asm/nonmatchings/overlays/ovl_81_name/CCD20", func_800E88FC_D06CC_name_81);
 

@@ -1,4 +1,5 @@
 #include "common.h"
+extern u8 D_800A1E81_A2A81;
 
 INCLUDE_ASM("asm/nonmatchings/saveload", func_8004FCF0_508F0);
 
@@ -44,6 +45,8 @@ INCLUDE_ASM("asm/nonmatchings/saveload", func_80050D84_51984);
 
 INCLUDE_ASM("asm/nonmatchings/saveload", func_80050DDC_519DC);
 
-INCLUDE_ASM("asm/nonmatchings/saveload", SLCurBoxNoSet);
+void SLCurBoxNoSet(u32 arg0) {
+    D_800A1E81_A2A81 = arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/saveload", func_80050E84_51A84);
